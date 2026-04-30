@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuildBugX - We Build, We Fix</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="data/style.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-text">BuildBugX</div>
+        <div class="loading-bar">
+            <div class="loading-progress">
+                <div class="loading-bug"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Background Animation -->
+    <div class="bg-animation" id="bgAnimation"></div>
+
+    <!-- Vertical Navigation -->
+    <nav class="vertical-nav">
+        <div class="nav-btn" data-section="hero">
+            <i class="fas fa-home"></i>
+            <span class="nav-text">Home</span>
+        </div>
+        <div class="nav-btn" data-section="services">
+            <i class="fas fa-cogs"></i>
+            <span class="nav-text">Services</span>
+        </div>
+        <div class="nav-btn" data-section="founder">
+            <i class="fas fa-user-tie"></i>
+            <span class="nav-text">Founder</span>
+        </div>
+        <div class="nav-btn" data-section="models">
+            <i class="fas fa-robot"></i>
+            <span class="nav-text">Models</span>
+        </div>
+        <div class="nav-btn" data-section="gallery">
+            <i class="fas fa-images"></i>
+            <span class="nav-text">Gallery</span>
+        </div>
+        <div class="nav-btn" data-section="achievements">
+            <i class="fas fa-trophy"></i>
+            <span class="nav-text">Achievements</span>
+        </div>
+        <div class="nav-btn" data-section="reviews">
+            <i class="fas fa-star"></i>
+            <span class="nav-text">Reviews</span>
+        </div>
+        <div class="nav-btn" data-section="about">
+            <i class="fas fa-info-circle"></i>
+            <span class="nav-text">About</span>
+        </div>
+        <div class="nav-btn" data-section="contact">
+            <i class="fas fa-envelope"></i>
+            <span class="nav-text">Contact</span>
+        </div>
+    </nav>
+
+    <div class="main-container">
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <h1>BuildBugX</h1>
+            <div class="subtitle">by Abhishek Yadav</div>
+            <div class="tagline" id="tagline">WE BUILD</div>
+            <div class="hero-buttons">
+                <button class="btn-primary btn-build" onclick="scrollToSection('services')">LET'S BUILD</button>
+                <button class="btn-primary btn-fix" onclick="scrollToSection('contact')">GET A FIX</button>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card" data-purpose="Custom Project" onclick="setContactPurpose('Custom Project')">
+                    <img src="data/images/Services/img01.jpg" alt="Web Dev">
+                    <div class="service-content">
+                        <h3>Custom Project</h3>
+                        <p>Customized Project for your idea or get an idea from us</p>
+                    </div>
+                </div>
+                <div class="service-card" data-purpose="Drone Development" onclick="setContactPurpose('Drone Development')">
+                    <img src="data/images/Services/img02.jpg" alt="Mobile">
+                    <div class="service-content">
+                        <h3>Drone Development</h3>
+                        <p>Get your Drone build, all types of models and Customized functions for your desired output</p>
+                    </div>
+                </div>
+                <div class="service-card" data-purpose="3D PRINTING" onclick="setContactPurpose('3D PRINTING')">
+                    <img src="data/images/Services/img03.jpg" alt="AI">
+                    <div class="service-content">
+                        <h3>3D PRINTING</h3>
+                        <p>Customized 3D Print, 3D Design</p>
+                    </div>
+                </div>
+                <div class="service-card" data-purpose="Ai Based Models" onclick="setContactPurpose('Ai Based Models')">
+                    <img src="data/images/Services/img04.jpg" alt="Cloud">
+                    <div class="service-content">
+                        <h3>Ai Based Models</h3>
+                        <p>Ai integrated models, IOT based, Semi-Autonomous </p>
+                    </div>
+                </div>
+                <div class="service-card" data-purpose="Drone Photography" onclick="setContactPurpose('Drone Photography')">
+                    <img src="data/images/Services/img05.jpg" alt="DevOps">
+                    <div class="service-content">
+                        <h3>Drone Photography</h3>
+                        <p>Drone Photography for all your events (avaliable at limited locations)</p>
+                    </div>
+                </div>
+                <div class="service-card" data-purpose="Technical Support" onclick="setContactPurpose('Technical Support')">
+                    <img src="data/images/Services/img06.jpg" alt="Security">
+                    <div class="service-content">
+                        <h3>Technical Support</h3>
+                        <p>Seek Technical Supoort from our expert to complete your project</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Founder Section -->
+        <section id="founder" class="grid-2">
+            <div class="glass-card">
+                <h2 class="section-title">Meet the Founder</h2>
+                <h3>Abhishek Yadav</h3>
+                <p>I am a technology-driven innovator with over four years of hands-on experience in building real-world solutions. My foundation in leadership and discipline comes from my journey as an NCC cadet, including participation in prestigious national platforms like RDC and TSC. I have been recognized at both regional and national levels for excellence in science and innovation, securing top positions in multiple exhibitions.
+
+Having recently completed my 12th standard, I bring a forward-thinking mindset combined with proven execution. Through BuildBugX, I aim to create future-ready solutions that blend technology, creativity, and impactful problem-solving.</p>
+                <ul style="margin-top: 2rem;">
+                    <li>✅ 20+ Projects completed</li>
+                    <li>✅ Winner at Various Tech events</li>
+                    <li>✅ National Level participation</li>
+                    <li>✅ 4 years of experience</li>
+                </ul>
+            </div>
+            <div class="glass-card">
+                <img src="data/images/Founder/img19.jpeg" alt="Founder" style="width:100%; border-radius:15px;">
+            </div>
+        </section>
+
+        <!-- Pre-built Models -->
+        <section id="models">
+            <h2 class="section-title">Pre-built Models</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="data/images/Models/img07.jpeg" alt="Model 1">
+                    <div class="service-content">
+                        <h3>AGRONE- Semi-Autonomous AGRICULTURAL DRONE</h3>
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+                            <button class="btn-primary" style="width:100%; margin-top:1rem;" onclick="event.preventDefault(); openVedioModal(this.parentElement.href)">
+                                Watch Video
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                <!-- 5 more model cards with similar structure -->
+                <div class="service-card">
+                    <img src="data/images/Models/img08.png" alt="Model 2">
+                    <div class="service-content">
+                        <h3>VAJRA- CV BASED MODERN BATTLE TAXI</h3>
+                                                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+                            <button class="btn-primary" style="width:100%; margin-top:1rem;" onclick="event.preventDefault(); openVedioModal(this.parentElement.href)">
+                                Watch Video
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="data/images/Models/img09.jpeg" alt="Model 3">
+                    <div class="service-content">
+                        <h3>AGNIPATH - ARMD TANK EQUIPPED WITH MODERN FEATURES</h3>
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+                            <button class="btn-primary" style="width:100%; margin-top:1rem;" onclick="event.preventDefault(); openVedioModal(this.parentElement.href)">
+                                Watch Video
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="data/images/Models/img10.jpeg" alt="Model 4">
+                    <div class="service-content">
+                        <h3>HEXACOPTER - SURVILLANCE DRONE</h3>
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+                            <button class="btn-primary" style="width:100%; margin-top:1rem;" onclick="event.preventDefault(); openVedioModal(this.parentElement.href)">
+                                Watch Video
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="data/images/Models/img11.jpeg" alt="Model 5">
+                    <div class="service-content">
+                        <h3>FPV DRONE - HIGH SPEED DRONE WITH FIRST PERSON VIEW</h3>
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+                            <button class="btn-primary" style="width:100%; margin-top:1rem;" onclick="event.preventDefault(); openVedioModal(this.parentElement.href)">
+                                Watch Video
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="data/images/Models/img12.png" alt="Model 6">
+                    <div class="service-content">
+                        <h3>Cybernated Helmet</h3>
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+                            <button class="btn-primary" style="width:100%; margin-top:1rem;" onclick="event.preventDefault(); openVedioModal(this.parentElement.href)">
+                                Watch Video
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery -->
+        <section id="gallery">
+            <h2 class="section-title">Our Work</h2>
+
+            <div class="gallery-wrapper">
+                <div class="gallery-track">
+                    <!-- Repeat images -->
+                    <img src="data/images/Gallery/img21.jpeg" onclick="openImageModal(this.src)">
+                    <img src="data/images/Gallery/img22.jpeg" onclick="openImageModal(this.src)">
+                    <img src="data/images/Gallery/img23.png" onclick="openImageModal(this.src)">
+                    <img src="data/images/Gallery/img24.webp" onclick="openImageModal(this.src)">
+                    <img src="data/images/Gallery/img25.png" onclick="openImageModal(this.src)">
+                    <img src="data/images/Gallery/img26.png" onclick="openImageModal(this.src)">
+
+                    <!-- DUPLICATE SAME IMAGES (important for seamless loop) -->
+                    <img src="data/images/Gallery/img21.jpeg" onclick="openImageModal(this.src)">
+                    <img src="data/images/Gallery/img22.jpeg" onclick="openImageModal(this.src)">
+                    <img src="data/images/Gallery/img23.png" onclick="openImageModal(this.src)">
+                    <img src="data/images/Gallery/img24.webp" onclick="openImageModal(this.src)">
+                    <img src="data/images/Gallery/img25.png" onclick="openImageModal(this.src)">
+                    <img src="data/images/Gallery/img26.png" onclick="openImageModal(this.src)">
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements -->
+        <section id="achievements">
+            <h2 class="section-title">Achievements</h2>
+            <div class="grid-3">
+                <div class="glass-card">
+                    <img src="data/images/Achievements/img13.jpg" alt="Award 1" style="width:100%; height:200px; object-fit:cover; border-radius:15px;">
+                    <h3>CBSE REGIONAL SCIENCE EXHIBITIONS</h3>
+                    <p>Winning and Participation in regional level CBSE event</p>
+                </div>
+                <div class="glass-card">
+                    <img src="data/images/Achievements/img14.jpg" alt="Award 2" style="width:100%; height:200px; object-fit:cover; border-radius:15px;">
+                    <h3>CBSE NATIONAL SCIENCE EXHIBITIONS</h3>
+                    <p>Winning and Participation in national level CBSE event</p>
+                </div>
+                <div class="glass-card">
+                    <img src="data/images/Achievements/img15.jpg" alt="Award 3" style="width:100%; height:200px; object-fit:cover; border-radius:15px;">
+                    <h3> NCC TECH EVENT NATIONAL LEVEL</h3>
+                    <p>Winning and Participation in IDEA & INNOVATION event by NCC</p>
+                </div>
+                <div class="glass-card">
+                    <img src="data/images/Achievements/img16.jpg" alt="Award 4" style="width:100%; height:200px; object-fit:cover; border-radius:15px;">
+                    <h3>NCC TECH EVENT DIRECTORATE LEVEL</h3>
+                    <p>Winnign and Participation in JK&L Dte tech event</p>
+                </div>
+                <div class="glass-card">
+                    <img src="data/images/Achievements/img17.jpg" alt="Award 5" style="width:100%; height:200px; object-fit:cover; border-radius:15px;">
+                    <h3>ARMD BRIGADE RECOGNITION</h3>
+                    <p>Awarded by AWWA and Armoured Brigade</p>
+                </div>
+                <div class="glass-card">
+                    <img src="data/images/Achievements/img18.jpg" alt="Award 6" style="width:100%; height:200px; object-fit:cover; border-radius:15px;">
+                    <h3>Smart India Hackathon</h3>
+                    <p>Winnign and Participation in multiple Hackathon at various levels</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews Section -->
+        <section id="reviews">
+            <h2 class="section-title">Reviews</h2>
+            <div class="grid-2">
+                <div class="reviews-container" id="reviewsContainer">
+                    <!-- Dynamic reviews will be added here -->
+                </div>
+                <div class="glass-card">
+                    <h3>Add Your Review</h3>
+                    <form id="reviewForm" method="POST" data-netlify="true">
+                        <input type="hidden" name="Form-Name" value="Review">
+                        <div class="form-group">
+                            <input type="text" name="Name" id="reviewName" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="Review" id="reviewText" rows="4" placeholder="Your Review" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Rating:</label>
+                            <div class="stars" id="ratingStars" style="cursor:pointer;">
+                                <i class="fas fa-star" data-rating="1"></i>
+                                <i class="fas fa-star" data-rating="2"></i>
+                                <i class="fas fa-star" data-rating="3"></i>
+                                <i class="fas fa-star" data-rating="4"></i>
+                                <i class="fas fa-star" data-rating="5"></i>
+                            </div>
+                            <input type="hidden" id="reviewRating" value="5">
+                        </div>
+                        <button type="submit" class="btn-primary btn-build" style="width:100%;">Submit Review</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="grid-2">
+            <div class="glass-card">
+                <h2 class="section-title">About BuildBugX</h2>
+                <p>BuildBugX was created to solve the real challenges students face while building technical projects. With over four years of hands-on experience, we specialize in turning ideas into practical, high-quality solutions. We offer services including 3D printing, drone development, AI-based projects, custom builds, and complete technical support—helping innovators bring their ideas to life with confidence.</p>
+                <p style="margin-top: 2rem;"><strong>Our Vision:</strong> Our vision is to make advanced technology accessible to every student and creator. We aim to build a future where innovation is not limited by resources or guidance, empowering the next generation to create smarter, faster, and without barriers.</p>
+            </div>
+            <div class="glass-card">
+                <img src="data/images/About/img20.jpg" alt="About" style="width:100%; border-radius:15px;">
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-grid">
+                <div class="glass-card contact-card" onclick="window.open('https://www.instagram.com/buildbugx/', '_blank')">
+                    <div class="contact-icon">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <h3>Instagram</h3>
+                    <p>@buildbugx</p>
+                </div>
+                <div class="glass-card contact-card" onclick="window.open('tel:+91 9797784868')">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Phone</h3>
+                    <p>+91 9797784868</p>
+                </div>
+                <div class="glass-card contact-card" onclick="window.location.href='mailto:hello@buildbugx.com'">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email</h3>
+                    <p>abhishekyadav.techdev@gmail.com</p>
+                </div>
+                <div class="glass-card contact-card" onclick="window.open('https://www.linkedin.com/in/abhishek-yadav-5827a83bb/', '_blank')">
+                    <div class="contact-icon">
+                        <i class="fab fa-linkedin"></i>
+                    </div>
+                    <h3>LinkedIn</h3>
+                    <p>BuildBugX Tech</p>
+                </div>
+            </div>
+            
+            <div class="glass-card" style="max-width: 600px; margin: 0 auto;">
+                <h3>Contact Us</h3>
+                <form id="contactForm" method="POST" data-netlify="true">
+                    <input type="hidden" name="Form-Name" value="contact">
+                    <div class="form-group">
+                        <input type="text" name="Name" id="contactName" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="Email" id="contactEmail" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="Purpose" id="contactPurpose" placeholder="Type your idea..." value="Type your idea..." style="font-style:italic;">
+                    </div>
+                    <div class="form-group">
+                        <textarea name="Message" id="contactMessage" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <label style="display:flex; align-items:center; gap:0.5rem; margin-bottom:1rem;">
+                        <input type="checkbox" id="termsCheckbox" required>
+                        <span>I agree to the <a href="#terms" style="color:var(--neon-green);">Terms & Conditions</a></span>
+                    </label>
+                    <button type="submit" class="btn-primary btn-build" style="width:100%;">Send Message</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Terms & Conditions -->
+        <section id="terms" style="padding:4rem 2rem;">
+            <div class="glass-card" style="max-width:800px; margin:0 auto;">
+                <h2 class="section-title">Terms & Conditions</h2>
+                <p><strong>1. BuildBugX can cancle your build request it depends upon slot avaliability, Clear everything with our executive before.</p>
+                <p><strong>2. Payment of project will not be refunded once the project build started.</p>
+                <p><strong>3. BuildBugX will send a working video of your project before shipping, you are requested to do the same for any claims.</p>
+                <p><strong>4. No Warrantee is Provided as working of a custom project depends upon correct usage.</p>
+                <p><strong>5. For Repairs Damaged part or replacemet will generate extra charge in needed + service charge.</p>
+                <p style="margin-top:2rem; font-size:0.9rem; color:var(--text-secondary);">Last updated: December 2024</p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer style="padding:3rem 2rem; text-align:center; border-top:1px solid var(--glass-border);">
+            <p>&copy; 2024 BuildBugX. All rights reserved. | Built by Abhishek Yadav</p>
+        </footer>
+    </div>
+
+    <!-- Video Modal -->
+    <div id="videoModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); z-index:10000; justify-content:center; align-items:center;">
+        <div style="position:relative;">
+            <button onclick="closeVedioModal()" style="position:absolute; top:-50px; right:0; background:none; border:none; color:white; font-size:2rem; cursor:pointer;">×</button>
+            <iframe id="videoPlayer" width="800" height="450" frameborder="0" referrerPolicy = 'strict-origin-when-cross-origin' allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- Image Modal -->
+    <div id="imageModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); z-index:10000; justify-content:center; align-items:center;">
+        <div style="position:relative; max-width:70vw; max-height:70vh">
+            <button onclick="closeImageModal()" style="position:absolute; top:-50px; right:0; background:none; border:none; color:white; font-size:2rem; cursor:pointer;">×</button>
+            <img id="modalImage" src="" style="max-width:70vw; max-height:70vh; object-fit:contain;">
+        </div>
+    </div>
+    <script src="data/script.js"></script>
+</body>
+</html>
